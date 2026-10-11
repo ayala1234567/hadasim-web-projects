@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Conference Registration</h1>
+        <form action="/submit-registration" method="POST">
+            <fieldset>
+            <legend>Personal Information</legend>
+
+            <div>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName"  minlength="2" autocomplete="name" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="phone">Phone Number:</label>
+                <!-- ?????. -->
+                <input type="tel" id="phone" name="phone" pattern="[0-9\- ]+" title="Please enter a valid phone number" autocomplete="tel">
+            </div>
+
+            </fieldset>
+            <br>
+
+            <fieldset>
+            <legend>Ticket & Workshops</legend>
+            
+            <div>
+                <label for="ticketType">Ticket Type:</label>
+                <select id="ticketType" name="ticketType" required>
+                <option value="">-- Please choose an option --</option>
+                <option value="standard">Standard</option>
+                <option value="vip">VIP</option>
+                <option value="student">Student</option>
+                </select>
+            </div>
+            <br>
+
+            <div>
+                <p>Select Workshops:</p>
+                <input type="checkbox" id="wsWeb" name="workshops" value="web_performance">
+                <label for="wsWeb">Web Performance</label><br>
+                
+                <input type="checkbox" id="wsAccess" name="workshops" value="accessibility">
+                <label for="wsAccess">Accessibility</label><br>
+                
+                <input type="checkbox" id="wsTest" name ="workshops" value="testing">
+                <label for="wsTest">Testing</label>
+            </div>
+            <br>
+
+            <div>
+                <p>Dietary Requirements:</p>  
+                <input type="radio" id="dietNone" name="diet" value="none" checked>
+                <label for="dietNone">None</label><br>
+                
+                <input type="radio" id="dietVegan" name="diet" value="vegan">
+                <label for="dietVegan">Vegan</label><br>
+                
+                <input type="radio" id="dietKosher" name="diet" value="kosher">
+                <label for="dietKosher">Kosher</label><br>
+
+                <input type="radio" id="dietHalal" name="diet" value="halal">
+                <label for="dietHalal">Halal</label><br>
+
+                <input type="radio" id="dietOther" name="diet" value="other">
+                <label for="dietOther">Other:</label>
+
+                <input type="text" id="otherDietDetail" name="otherDietDetail" placeholder="Please specify">
+            </div>
+            <br>
+
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend>Payment Details</legend>
+            <div>
+                <label for="cardNumber">Credit Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" pattern="[0-9 ]{13,24}" title="Please enter 13-19 digits, spaces allowed" autocomplete="cc-number" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="month" id="expiryDate" name="expiryDate" autocomplete="cc-exp" min="2026-10" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="cvv">CVV:</label>
+                <input type="password" id="cvv" name="cvv" pattern="[0-9 ]{3,4}" title="Please enter a 3- or 4-digit CVV"  autocomplete="cc-csc" required>
+            </div>
+            </fieldset>
+            <br>
+            <fieldset>
+            <legend>Additional</legend>
+            <div>
+                <label for="studentId">Student ID Upload (If Student ticket selected):</label>
+            <br>
+                <input type="file" id="studentId" name="studentId" accept=".jpg, .jpeg, .png" aria-describedby="studentIdHelp">
+            <br>
+                <small id="studentIdHelp">Accepted formats: PDF, JPG, PNG.</small>
+            </div>
+
+            <br>
+            <div>
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the Terms and Conditions</label>
+            </div>
+            </fieldset>
+            
+            <br>
+            <button type="submit">Complete Registration</button>
+        </form>
+    </main>
+</body>
+</html>
