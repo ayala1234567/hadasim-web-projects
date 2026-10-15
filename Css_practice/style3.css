@@ -1,0 +1,78 @@
+/* עיצוב בסיסי לכל הכרטיסים */
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.post-card {
+    background-color: rgb(217, 232, 236);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.font-one p {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700; 
+    font-size: 1.8rem; 
+}
+
+
+.font-two p {
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.font-three p {
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+p::first-line{
+    color: rgb(159, 155, 226);
+}
+
+p::first-letter{
+    color: rgb(154, 70, 233);
+}
+
+.delete-btn:hover{
+    color: rgb(250, 10, 10);
+}
+
+.delete-btn{
+    border-radius: 10px;
+    border: none;
+}
+
+.post-card:has(.dark-mode-toggle:checked) {
+    background-color: #222222;
+    color: #ffffff;            
+}
+
+.title{
+    text-align: center;
+    font-size: 5rem;
+}
+
+/* .post-card:has(.dark-mode-toggle:checked) h2,
+.post-card:has(.dark-mode-toggle:checked) p {
+    color: #ffffff;
+} */
