@@ -4,7 +4,7 @@
     background: linear-gradient(to right, #f8f1fd 0%, #ffffff 50%, #fff4e8 100%);
 }
 
-/* מיכל מרכזי צר וממורכז יותר */
+
 .images-container {
     max-width: 960px;
     margin: 0 auto;
@@ -83,22 +83,22 @@
     margin: 0;
 }
 
-/* Discover Section - בדיוק 2 שורות שכל אחת מכילה 3 כרטיסים */
+
 .discover-section {
     margin-top: 40px;
-    overflow: hidden; /* מונע זליגה של אלמנטים צפים */
+    overflow: hidden; 
 }
 
 .cards-container {
-    overflow: hidden; /* מאפס את הצפים פנימה */
+    overflow: hidden; 
     width: 100%;
 }
 
 .discovery-card {
     float: left;
-    width: 32%; /* רוחב מותאם בדיוק ל-3 פריטים בשורה */
-    margin-right: 2%; /* מרווח קטן בין הכרטיסים */
-    margin-bottom: 15px; /* מרווח בין השורות */
+    width: 32%; 
+    margin-right: 2%; 
+    margin-bottom: 15px; 
     box-sizing: border-box;
     padding: 12px 15px;
     text-decoration: none;
@@ -108,7 +108,7 @@
     border: 1px solid #f0f0f0;
 }
 
-/* איפוס המרווח הימני לכל כרטיס שלישי כדי שלא ייפול לשורה חדשה */
+
 .discovery-card:nth-child(3n) {
     margin-right: 0;
 }
