@@ -1,0 +1,383 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #0b0c10;
+    color: #c5c6c7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: ltr;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 1. HEADER */
+.site-header {
+    background-color: #12131c;
+    border: 1px solid #1f2233;
+    border-radius: 10px;
+    padding: 5px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.site-header:hover {
+    box-shadow: 0 8px 24px rgba(108, 202, 85, 0.18);
+    border-bottom-color: rgba(108, 202, 85, 0.3);
+}
+
+.header-center h1 {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #6CCA55;
+}
+
+.status-pill {
+    background-color: rgba(108, 202, 85, 0.2);
+    padding: 6px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    border: 1px solid #6CCA55;
+    transition: background-color 0.3s ease;
+}
+
+.status-pill:hover {
+    background-color: rgba(108, 202, 85, 0.4);
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.green-dot {
+    background-color: #6CCA55;
+    box-shadow: 0 0 8px #6CCA55;
+    animation: dot 1s infinite;
+}
+
+@keyframes dot {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.shield-icon {
+    display: inline-flex;        
+    justify-content: center;
+    align-items: center;
+    width: 24px;                  
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    background-color: #6CCA55;
+}
+
+.shield-icon:hover {
+    transform: rotate(180deg);
+}
+
+/* 2. MAIN DASHBOARD BOX (Radar + Stats) */
+.main-dashboard-box {
+    background-color: #12131c;
+    border: 1px solid #1f2233;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: border 0.3s ease;
+}
+
+.main-dashboard-box:hover {
+    border: 1px solid #6CCA55;
+}
+
+/* מיכל הרדאר החיצוני */
+.radar-container {
+    width: 180px;
+    height: 180px;
+    border: 2px solid #6CCA55;
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle, rgba(108, 202, 85, 0.1) 0%, rgba(11, 12, 16, 0.8) 70%);
+    box-shadow: inset 0 0 15px rgba(108, 202, 85, 0.3);
+    overflow: hidden;
+}
+
+.radar-circle {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* קווי הרשת */
+.radar-circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(108, 202, 85, 0.2);
+    z-index: 1;
+}
+
+.radar-circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(108, 202, 85, 0.2);
+    z-index: 1;
+}
+
+/* אלומת הסורק */
+.radar-sweep {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 0deg,
+        rgba(108, 202, 85, 0.45) 0deg,
+        rgba(108, 202, 85, 0.05) 50deg,
+        transparent 55deg,
+        transparent 360deg
+    );
+    animation: radar-spin 3s linear infinite;
+    z-index: 2;
+    pointer-events: none;
+}
+
+@keyframes radar-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* נקודות הרדאר */
+.blip {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #6CCA55;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #6CCA55;
+    z-index: 3;
+    
+}
+
+.blip-1 { top: 40px; left: 120px; }
+.blip-2 { top: 110px; left: 50px; }
+.blip-3 { top: 90px; left: 140px; }
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.stat-item .stat-number {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #6CCA55;
+    display: block;
+}
+
+.stat-item .stat-label {
+    font-size: 0.85rem;
+    color: #8c8f94;
+    letter-spacing: 1px;
+}
+
+/* 3. ACTION BUTTONS ROW */
+.actions-row {
+    display: flex;
+    gap: 15px;
+}
+
+.action-btn {
+    background-color: #12131c;
+    border: 1px solid #1f2233;
+    color: #c5c6c7;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: rgba(108, 202, 85, 0.2);
+    border: 1px solid #6CCA55;
+    transform: translateY(-1px);
+}
+
+/* 4. CARDS GRID */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.intel-card {
+    background-color: #12131c;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid transparent;
+    border-left: 4px solid transparent; 
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.intel-card:hover {
+    border-color: #6CCA55;
+    transform: translateY(-2px);
+}
+
+.intel-card.critical-border { border-left-color: #ff3366; }
+.intel-card.high-border { border-left-color: #ffb703; }
+.intel-card.medium-border { border-left-color: #6CCA55; }
+
+.intel-card.critical-border:hover { border-left-color: #6CCA55; }
+.intel-card.high-border:hover { border-left-color: #6CCA55; }
+.intel-card.medium-border:hover { border-left-color: #6CCA55; }
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+}
+
+.badge {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.badge.critical { background-color: rgba(255, 51, 102, 0.2); color: #ff3366; }
+.badge.high { background-color: rgba(255, 183, 3, 0.2); color: #ffb703; }
+.badge.medium { background-color: rgba(108, 202, 85, 0.2); color: #6CCA55; }
+
+.card-status {
+    color: #8c8f94;
+}
+
+.intel-card h3 {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.card-progress-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.progress-bar-container {
+    flex-grow: 1;
+    background-color: #0b0c10;
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #6CCA55;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.progress-text {
+    font-size: 0.75rem;
+    color: #8c8f94;
+    min-width: 30px;
+    text-align: left;
+}
+
+/* 5. THREAT DETECTED BANNER */
+.threat-banner {
+    background-color: rgba(255, 51, 102, 0.1);
+    border: 1px solid #ff3366;
+    border-radius: 8px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.threat-banner:hover {
+    background-color: rgba(255, 51, 102, 0.2);
+    padding: 14px 25px;
+}
+
+.red-dot {
+    background-color: #ff3366;
+    box-shadow: 0 0 10px #ff3366;
+}
+
+.threat-text {
+    color: #ff3366;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+/* 6. BOTTOM NAVIGATION */
+.bottom-nav {
+    border-top: 1px solid #1f2233;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    margin-top: 6vh;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    color: #8c8f94;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #6CCA55;
+}
