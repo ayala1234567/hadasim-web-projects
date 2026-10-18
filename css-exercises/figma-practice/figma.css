@@ -1,4 +1,4 @@
-/* איפוס בסיסי וצבעי בסיס */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #0b0f19; /* רקע כהה עמוק כמו בעיצוב */
+    background-color: #0b0f19; 
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
@@ -83,9 +83,7 @@ body {
     color: #0b0f19;
 }
 
-    /* ================
-    איזור ראשי 
-    ================ */
+    
 .site-main {
     max-width: 1400px;
     margin: 0 auto;
@@ -159,9 +157,7 @@ body {
 }
 
 
-    /* ==========================================
-    אזור הכרטיסים (Features Section)
-    ========================================== */
+    
 .features-section {
     max-width: 1400px;
     margin: 0 auto;
@@ -433,10 +429,10 @@ body {
     font-size: 0.85rem;
 }
 
-.roadmap-card:nth-child(1) .roadmap-list li span { color: #10b981; /* ירוק */ }
-.roadmap-card:nth-child(2) .roadmap-list li span { color: #3b82f6; /* כחול */ }
-.roadmap-card:nth-child(3) .roadmap-list li span { color: #facc15; /* צהוב */ }
-.roadmap-card:nth-child(4) .roadmap-list li span { color: #ef4444; /* אדום */ }
+.roadmap-card:nth-child(1) .roadmap-list li span { color: #10b981;  }
+.roadmap-card:nth-child(2) .roadmap-list li span { color: #3b82f6;  }
+.roadmap-card:nth-child(3) .roadmap-list li span { color: #facc15;  }
+.roadmap-card:nth-child(4) .roadmap-list li span { color: #ef4444;  }
 
 
 .tokner-coming-placeholder{
@@ -477,7 +473,7 @@ body {
     display: block;
 }
 
-/* השכבה שיושבת בדיוק מעל התמונה */
+
 .presale-overlay {
     position: absolute;
     top: 59%;
@@ -497,7 +493,7 @@ body {
     text-align: center;
 }
 
-/* סידור שלושת הכרטיסים אחד ליד השני */
+
 .phases-grid {
     display: flex;
     justify-content: center;
@@ -506,7 +502,7 @@ body {
     width: 100%;
 }
 
-/* עיצוב המלבן הלבן */
+
 .phase-card {
     background-color: #ffffff;
     color: #0b0f19;
@@ -525,7 +521,7 @@ body {
 
 
 
-/* התג המעוגל עם המספר */
+
 .phase-badge {
     width: 44px;
     height: 44px;
@@ -593,7 +589,7 @@ body {
     margin-top: 10px;
 }
 
-/* מוריד את הקופסה הלבנה האמצעית (Phase Two) כלפי מטה */
+
 .phases-grid .phase-card:nth-child(2) {
     transform: translateY(3rem);
 }
@@ -644,7 +640,7 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* דירוג גובה - הכרטיס האמצעי נמוך יותר כמו בעיצוב */
+
 .step-card-2 {
     transform: translateY(2rem);
 }
@@ -662,7 +658,7 @@ body {
     line-height: 1.6;
 }
 
-/* עיגולי החצים בין הכרטיסים */
+
 .step-arrow {
     width: 44px;
     height: 44px;
@@ -745,7 +741,7 @@ body {
     width: auto;
 }
 
-/* רשתות חברתיות */
+
 .social-links {
     display: flex;
     gap: 0.8rem;
@@ -797,7 +793,7 @@ body {
         align-items: center;
     }
 
-    /* מעלים את התפריט האמצעי במסך נייד */
+    
     .main-navigation {
         display: none; 
     }
@@ -815,7 +811,7 @@ body {
         font-size: 0.85rem;
     }
 
-    /* שאר הגדרות ה-Hero שסידרנו קודם */
+    
     .hero-section {
         display: flex;
         flex-direction: column;

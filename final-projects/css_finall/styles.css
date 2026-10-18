@@ -116,7 +116,7 @@ body {
     border: 1px solid #6CCA55;
 }
 
-/* מיכל הרדאר החיצוני */
+
 .radar-container {
     width: 180px;
     height: 180px;
@@ -134,7 +134,7 @@ body {
     position: relative;
 }
 
-/* קווי הרשת */
+
 .radar-circle::before {
     content: '';
     position: absolute;
@@ -157,7 +157,7 @@ body {
     z-index: 1;
 }
 
-/* אלומת הסורק */
+
 .radar-sweep {
     position: absolute;
     top: 0;
@@ -186,7 +186,7 @@ body {
     }
 }
 
-/* נקודות הרדאר */
+
 .blip {
     position: absolute;
     width: 6px;

@@ -16,9 +16,9 @@ nav {
 }
 
 nav a {
-    text-decoration: none; /* הסרת קו תחתון מהקישורים */
-    padding: 0 8px;        /* רווח מימין ומשמאל לטקסט */
-    border-left: 1px solid #ffffff; /* קו הפרדה אנכי משמאל */
+    text-decoration: none; 
+    padding: 0 8px;        
+    border-left: 1px solid #ffffff; 
     color: white;
 }
 

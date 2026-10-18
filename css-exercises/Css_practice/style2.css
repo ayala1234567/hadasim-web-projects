@@ -6,7 +6,7 @@ body {
 
 header {
     background: #333;
-    padding: 0 20px; /* איפסנו את המרווח למעלה ולמטה (0), השארנו 20 פיקסלים בצדדים */
+    padding: 0 20px; 
     height: 50px;
     
 }
@@ -20,9 +20,9 @@ nav {
 }
 
 nav a {
-    text-decoration: none; /* הסרת קו תחתון מהקישורים */
-    padding: 0 8px;        /* רווח מימין ומשמאל לטקסט */
-    border-left: 1px solid #0c0101; /* קו הפרדה אנכי משמאל */
+    text-decoration: none; 
+    padding: 0 8px;        
+    border-left: 1px solid #0c0101; 
     color: rgb(6, 0, 0);
 }
 
@@ -67,9 +67,9 @@ main {
     width: 25%;
     height: auto;
     display: inline-block;
-    vertical-align: top; /* מיישר את התמונה לקו העליון */
+    vertical-align: top; 
     margin-right: 15px;
-    margin-top: 40px; /* תדאג שהמספר כאן זהה למספר בכתבה האמצעית */
+    margin-top: 40px; 
     position: sticky;
     top: 70px;
 }
@@ -96,11 +96,11 @@ main {
 .middle_news {
     background: #f4f4f4;
     padding: 10px;
-    margin-top: 40px; /* חייב להיות זהה ל-margin-top של התמונה */
+    margin-top: 40px; 
     margin-bottom: 20px;
     width: 39%;
     display: inline-block;
-    vertical-align: top; /* מיישר את הכתבה לקו העליון יחד עם התמונה */
+    vertical-align: top; 
 }
 
 .breaking-news-list p {
@@ -132,11 +132,11 @@ main {
 }
 
 #logo {
-   height: 100%; /* אומר ללוגו לקחת 100% מהגובה של הפס השחור (50px) */
-    max-height: none; /* חובה: מבטל את ההגבלה הקודמת של ה-25 פיקסלים */
-    width: auto; /* שומר על הפרופורציות המקוריות של התמונה כדי שלא תימעך */
+   height: 100%; 
+    max-height: none; 
+    width: auto; 
     
-    /* הגדרות המירכוז: */
+    
     float: none;
     display: block;
     margin: 0 auto;
@@ -151,7 +151,7 @@ main {
 
 .post-header{
     display: inline-block;
-    vertical-align: top; /* מיישר את הכתבה לקו העליון יחד עם התמונה */
+    vertical-align: top; 
     width: 50%;
 
 
