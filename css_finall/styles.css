@@ -195,6 +195,7 @@ body {
     border-radius: 50%;
     box-shadow: 0 0 6px #6CCA55;
     z-index: 3;
+    
 }
 
 .blip-1 { top: 40px; left: 120px; }
@@ -342,6 +343,7 @@ body {
 
 .threat-banner:hover {
     background-color: rgba(255, 51, 102, 0.2);
+    padding: 14px 25px;
 }
 
 .red-dot {
